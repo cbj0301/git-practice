@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+
+
+int x = 5;
+
+int y = 100;
+
+
+
+
+
+int factorial(int n)
+
+{
+
+	if (n == 0 || n == 1)
+
+		return 1;
+
+	return n * factorial(n - 1);
+
+}
+
+
+
+
+
+
+
+void myFunction() {
+
+	int x = 200;
+
+	x = sum(x, x);
+
+	printf("x =  %d\n", x);
+
+}
+
+
+
+int sum(int i, int j) {
+
+	y = 500;
+
+	return i + j;
+
+}
+
+
+
+
+int main() {
+
+	int a, b, c;
+
+	int ai[3] = { 100, 200, 300 };
+
+	myFunction();
+
+	a = 10;
+
+	b = 20;
+
+	c = sum(a, b);
+
+	c = sum(a, b);
+
+	printf("x = %d\n", x);
+
+	printf("y = %d\n", y);
+
+	printf("sum = %d\n", c);
+
+
+
+	printf("fatorial(5) = %d \n", factorial(5));
+
+
+
+	return 0;
+
+}
