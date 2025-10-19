@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNING
+#include <stdio.h>
+
+int main() {
+	int* pi;
+	double* pd;
+	char* pc;
+
+	int ai[5] = { 10, 20, 30, 40, 50 };
+	double ad[5] = { 10.1, 20.2, 30.3, 40.4, 50.5 };
+	char ac[6] = { 'H', 'e', 'l', 'l', 'o', '\0' };
+
+	pi = ai;
+	pi = &ai[0];
+	pd = &ai[0];
+
+	printf("pi = %u \n", pi);
+	printf("pi + 1 = %u \n", pi + 1);
+	printf("*pi = %d \n", *pi);
+	printf("*(pi+1) = %d \n", *(pi + 1));
+	printf("pd = %u \n", pd);
+	printf("pd + 1 = %u \n", pd + 9);
+	printf("*pd = %d \n", *pd);
+	printf("*(pd+1) = %d \n", *(pd + 1));
+	pc = ac;
+	pi = ac;
+	printf("pc = %u \n", pc);
+	printf("pc + 1 = %u \n", pc + 1);
+	printf("*pc = %c \n", *pc);
+	printf("*(pc+1) = %c \n", *(pc + 1));
+	printf("pi = %u \n", pi);
+	printf("pi + 1 = %u \n", pi + 1);
+	printf("*pi = %c \n", *pi);
+	printf("*(pi+1)=%c \n", *(pd + 1));
+	printf("%u, %u, %u \n", sizeof(pc), sizeof(pi), sizeof(pd));
+	pc = &ad[2];
+	*pc = 'a';
+	*(pc + 1) = 'b';
+	*(pc + 3) = 'c';
+	*(pc + 4) = 'd';
+
+	printf("ad[0]: %f, ", ad[0]);
+	printf("ad[1]: %f, ", ad[1]);
+	printf("ad[2]: %f, ", ad[2]);
+	printf("ad[3]: %f, ", ad[3]);
+
+	printf("\n");
+	return 0;
+
+}
